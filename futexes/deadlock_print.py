@@ -13,7 +13,7 @@ def print_process():
     #sleep(120)
     cpid = os.getpid()
     #path = '/home/jquisenberry/python/out.txt'
-    path = './' + str(cpid) + '.txt'
+    path = './output/' + str(cpid) + '.txt'
     with open(path, 'w') as f:
         f.write(str(cpid))
     while True:
