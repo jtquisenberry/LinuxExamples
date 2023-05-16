@@ -8,14 +8,31 @@ import os
 import sys
 import logging
 
+logger = logging.getLogger()
+logging.basicConfig(level=logging.DEBUG)
+
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+
+
 def print_thread(ppid):
     placeholder = 1 
     end = start = datetime.datetime.now() 
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
     i = 0
-    while i < 2000:
+    while i < 2000000000:
     #while True:
         #placeholder += 1
         print("PRINT THREAD OF MAIN PROCESS PID:", ppid, flush=True)
+        #logger.info("PRINT THREAD OF MAIN PROCESS PID: {}".format(ppid))
         i += 1
     diff = (end - start).total_seconds()
     while diff < 1:
@@ -37,12 +54,20 @@ def print_process():
     #sleep(120)
     cpid = os.getpid()
     path = './output/' + str(cpid) + '.txt'
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
     #with open(path, 'w') as f:
         #f.write(str(cpid))
     #logger = logging.getLogger()
-    #while True:
+    #logging.basicConfig(level=logging.DEBUG)
+    while True:
         #print("CPID:", cpid, flush=True)
-        #logger.warning("CPID: {}".format(cpid))        
+        logger.info("CPID: {}".format(cpid))        
+        break
 
 if __name__ == '__main__':
     ppid = os.getpid()
@@ -53,7 +78,14 @@ if __name__ == '__main__':
     
     for thread in threads:
         thread.start()
-
+    sleep(.1)
     process = Process(target=print_process)
     process.start()
+
+    while True:
+        if not multiprocessing.active_children():
+            p = Process(target=print_process)
+            p.start()
+        sleep(0.1)
+
     print("DONE")
