@@ -1,0 +1,1 @@
+cmd_/home/useradmin/git/LinuxExamples/kernel/hello/hello.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -z noexecstack  -T ./scripts/module-common.lds --build-id  -o /home/useradmin/git/LinuxExamples/kernel/hello/hello.ko /home/useradmin/git/LinuxExamples/kernel/hello/hello.o /home/useradmin/git/LinuxExamples/kernel/hello/hello.mod.o ;  true
