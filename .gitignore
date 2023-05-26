@@ -1,1 +1,15 @@
 futexes/output/
+kernel/readdevmem/.cache.mk
+kernel/readdevmem/.hello.ko.cmd
+kernel/readdevmem/.hello.mod.cmd
+kernel/readdevmem/.hello.mod.o.cmd
+kernel/readdevmem/.hello.o.cmd
+kernel/readdevmem/.hello3.ko.cmd
+kernel/readdevmem/.hello3.mod.cmd
+kernel/readdevmem/.hello3.mod.o.cmd
+kernel/readdevmem/.hello3.o.cmd
+kernel/readdevmem/.Module.symvers.cmd
+kernel/readdevmem/.modules.order.cmd
+kernel/readdevmem/.readdevmem.ko.cmd
+kernel/readdevmem/.readdevmem.mod.o.cmd
+kernel/readdevmem/.readdevmem.o.cmd
