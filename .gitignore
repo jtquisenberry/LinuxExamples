@@ -13,3 +13,4 @@ kernel/readdevmem/.modules.order.cmd
 kernel/readdevmem/.readdevmem.ko.cmd
 kernel/readdevmem/.readdevmem.mod.o.cmd
 kernel/readdevmem/.readdevmem.o.cmd
+kernel/readdevmem/.tmp_versions/readdevmem.mod
