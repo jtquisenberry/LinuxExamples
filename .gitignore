@@ -26,3 +26,7 @@ kernel/addr/.hello3.o.cmd
 kernel/addr/.Module.symvers.cmd
 kernel/addr/.modules.order.cmd
 kernel/addr/.tmp_versions/hello3.mod
+kernel/addr/.addr.ko.cmd
+kernel/addr/.addr.mod.o.cmd
+kernel/addr/.addr.o.cmd
+kernel/addr/.tmp_versions/addr.mod
