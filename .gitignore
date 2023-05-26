@@ -14,3 +14,15 @@ kernel/readdevmem/.readdevmem.ko.cmd
 kernel/readdevmem/.readdevmem.mod.o.cmd
 kernel/readdevmem/.readdevmem.o.cmd
 kernel/readdevmem/.tmp_versions/readdevmem.mod
+kernel/addr/.cache.mk
+kernel/addr/.hello.ko.cmd
+kernel/addr/.hello.mod.cmd
+kernel/addr/.hello.mod.o.cmd
+kernel/addr/.hello.o.cmd
+kernel/addr/.hello3.ko.cmd
+kernel/addr/.hello3.mod.cmd
+kernel/addr/.hello3.mod.o.cmd
+kernel/addr/.hello3.o.cmd
+kernel/addr/.Module.symvers.cmd
+kernel/addr/.modules.order.cmd
+kernel/addr/.tmp_versions/hello3.mod
