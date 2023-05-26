@@ -1,19 +1,12 @@
 #include <linux/module.h>
-#define INCLUDE_VERMAGIC
-#include <linux/build-salt.h>
-#include <linux/elfnote-lto.h>
-#include <linux/export-internal.h>
 #include <linux/vermagic.h>
 #include <linux/compiler.h>
-
-BUILD_SALT;
-BUILD_LTO_INFO;
 
 MODULE_INFO(vermagic, VERMAGIC_STRING);
 MODULE_INFO(name, KBUILD_MODNAME);
 
 __visible struct module __this_module
-__section(".gnu.linkonce.this_module") = {
+__attribute__((section(".gnu.linkonce.this_module"))) = {
 	.name = KBUILD_MODNAME,
 	.init = init_module,
 #ifdef CONFIG_MODULE_UNLOAD
@@ -26,18 +19,20 @@ __section(".gnu.linkonce.this_module") = {
 MODULE_INFO(retpoline, "Y");
 #endif
 
-
 static const struct modversion_info ____versions[]
-__used __section("__versions") = {
-	{ 0xbdfb6dbb, "__fentry__" },
-	{ 0x7cd8d75e, "page_offset_base" },
-	{ 0x92997ed8, "_printk" },
-	{ 0xd0da656b, "__stack_chk_fail" },
-	{ 0x5b8239ca, "__x86_return_thunk" },
-	{ 0x541a6db8, "module_layout" },
+__used
+__attribute__((section("__versions"))) = {
+	{ 0x3996f171, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
+	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
+	{ 0x7cd8d75e, __VMLINUX_SYMBOL_STR(page_offset_base) },
+	{ 0xbdfb6dbb, __VMLINUX_SYMBOL_STR(__fentry__) },
 };
 
-MODULE_INFO(depends, "");
+static const char __module_depends[]
+__used
+__attribute__((section(".modinfo"))) =
+"depends=";
 
 
-MODULE_INFO(srcversion, "F6CAB8413C817C5585CDBCB");
+MODULE_INFO(srcversion, "ED0056865A9E28EBD7D52BD");
