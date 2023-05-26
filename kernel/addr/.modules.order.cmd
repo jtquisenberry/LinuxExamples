@@ -1,1 +1,1 @@
-cmd_/home/jquisenberry/git/LinuxExamples/kernel/addr/modules.order := {   echo /home/jquisenberry/git/LinuxExamples/kernel/addr/hello.ko; :; } | awk '!x[$$0]++' - > /home/jquisenberry/git/LinuxExamples/kernel/addr/modules.order
+cmd_/home/jquisenberry/git/LinuxExamples/kernel/addr/modules.order := {   echo /home/jquisenberry/git/LinuxExamples/kernel/addr/hello3.ko; :; } | awk '!x[$$0]++' - > /home/jquisenberry/git/LinuxExamples/kernel/addr/modules.order

@@ -30,7 +30,9 @@ MODULE_INFO(retpoline, "Y");
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0xbdfb6dbb, "__fentry__" },
+	{ 0x7cd8d75e, "page_offset_base" },
 	{ 0x92997ed8, "_printk" },
+	{ 0xd0da656b, "__stack_chk_fail" },
 	{ 0x5b8239ca, "__x86_return_thunk" },
 	{ 0x541a6db8, "module_layout" },
 };
@@ -38,4 +40,4 @@ __used __section("__versions") = {
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "013A10DEBC12D855DFEF8F2");
+MODULE_INFO(srcversion, "F6CAB8413C817C5585CDBCB");
