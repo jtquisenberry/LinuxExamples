@@ -1,3 +1,3 @@
-/home/useradmin/git/LinuxExamples/kernel/hello/hello.ko
-/home/useradmin/git/LinuxExamples/kernel/hello/hello.o
+/home/useradmin/git/LinuxExamples/kernel/addr/hello.ko
+/home/useradmin/git/LinuxExamples/kernel/addr/hello.o
 

@@ -3,16 +3,16 @@
 #include <linux/init.h>      // included for __init and __exit macros
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Lakshmanan");
+MODULE_AUTHOR("TestUser");
 MODULE_DESCRIPTION("A Simple Hello World module");
 
 static int __init hello_init(void)
 {
-    int* addr = (int*) 0xf53891010;
-    printk(KERN_INFO "addr %p\n", addr );
-    printk(KERN_INFO "value %d\n", *addr );
-    printk(KERN_INFO "address\n");
-    printk(KERN_INFO "Hello world!\n");
+    phys_addr_t addr = 0xf53891010;
+    //int* addr2 = (int*) 0xf53891010;
+    printk(KERN_INFO "addr %pa\n", &addr );
+    printk(KERN_INFO "value %llx\n", addr );
+    //printk(KERN_INFO "value %x\n", *addr2);
     return 0;    // Non-zero return means that the module couldn't be loaded.
 }
 
