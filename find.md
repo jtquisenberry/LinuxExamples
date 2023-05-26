@@ -30,5 +30,6 @@ find -ctime -.1
 find -ctime -2
 find -type d -ctime -1
 find /usr/share/gdb/auto-load/usr/bin/ -name python*
+find . -name "foo*"
 ```
 
