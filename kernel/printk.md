@@ -31,6 +31,18 @@ If variable is of Type,         use printk format specifier:
         u64                     %llu or %llx
 ```
 
+# Physical Addresses
+
+```
+phys_addr_t paddr = 0x1234;
+printk(KERN_INFO "%pa\n", &paddr);
+// Result: 0x0000000000001234
+```
+https://stackoverflow.com/questions/73774516/how-to-use-printk-to-print-a-physical-address-aka-phys-addr-t
+
+
 # Links
 
 https://docs.kernel.org/core-api/printk-formats.html
+
+https://stackoverflow.com/questions/73774516/how-to-use-printk-to-print-a-physical-address-aka-phys-addr-t
