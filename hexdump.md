@@ -2,6 +2,24 @@
 
 # Examples
 
+
+## Offsets
+
+* `-n` specifies the length in bytes.
+* `-s` specifies the offset (where to start reading).
+
+`-s` MUST be specified in hexadecimal format.
+
+```
+hexdump -n 4 -s 0x11C -e '4/1 "%x " "\n"' myFile
+```
+https://stackoverflow.com/questions/19215180/bash-get-the-bytes-at-offset-for-length
+
+
+## Read a portion of /dev/mem
+
+Most of /dev/mem is protected, unless certain options are set when compiling the kernel. However, this is how to *try* to read /dev/mem.
+
 ```
 # hexdump -C /dev/mem | head -5
 00000000  53 ff 00 f0 53 ff 00 f0  c3 e2 00 f0 53 ff 00 f0  |S...S.......S...|
