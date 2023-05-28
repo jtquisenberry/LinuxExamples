@@ -36,7 +36,7 @@ kernel/hello/hello.o
 kernel/hello/hello.mod.o
 kernel/hello/hello.mod.c
 kernel/hello/hello.ko
-kernel/hello/hello.c
+kernel/hello/hello.mod
 kernel/hello/.tmp_versions/hello.mod
 kernel/hello/.modules.order.cmd
 kernel/hello/.Module.symvers.cmd
