@@ -3,21 +3,40 @@
 * Ubuntu 22.04
 * Kernel 5.19.0-42-generic vmlinux
 
+# Introduction
 
-# Setting up Linux Kernel awareness in gdb
+Debugging a kernel or a kernel module modules with GDB is typically not done one the machine running the code. Instead, the kernel is run in a virtual machine (the guest system), often a QEMU virtual machine. The debugger is attached in the host system. 
 
-My kernel is not setup for GDB. Here is what I did to get `lx-symbols` to work in `gdb`. The results of commands like `lx-ps` do not appear to be complete, though.
+I performed the steps described in this document to setup a guest machine running.
 
-Reduced functionality may occur because I did not build the kernel. 
-
-kernel.org lists these setup steps:
-https://docs.kernel.org/dev-tools/gdb-kernel-debugging.html
-
-* Create a virtual Linux machine for QEMU/KVM (see www.linux-kvm.org and www.qemu.org for more details). For cross-development, https://landley.net/aboriginal/bin keeps a pool of machine images and toolchains that can be helpful to start from.
-* Build the kernel with CONFIG_GDB_SCRIPTS enabled, but leave CONFIG_DEBUG_INFO_REDUCED off. If your architecture supports CONFIG_FRAME_POINTER, keep it enabled.
-* Install that kernel on the guest, turn off KASLR if necessary by adding "nokaslr" to the kernel command line. Alternatively, QEMU allows to boot the kernel directly using -kernel, -append, -initrd command line switches. This is generally only useful if you do not depend on modules. See QEMU documentation for more details on this mode. In this case, you should build the kernel with CONFIG_RANDOMIZE_BASE disabled if the architecture supports KASLR.
+# Ensure the kernel was configured with the required options.
 
 ```
+/boot/# nano config-5.19.0-42-generic
+```
+
+## For kgdb
+
+```
+# CONFIG_STRICT_KERNEL_RWX is not set
+CONFIG_FRAME_POINTER=y
+CONFIG_KGDB=y
+CONFIG_KGDB_SERIAL_CONSOLE=y
+```
+
+## For kdb
+
+```
+# CONFIG_STRICT_KERNEL_RWX is not set
+CONFIG_FRAME_POINTER=y
+CONFIG_KGDB=y
+CONFIG_KGDB_SERIAL_CONSOLE=y
+CONFIG_KGDB_KDB=y
+CONFIG_KDB_KEYBOARD=y
+
+```
+
+If I were trying to replace the current kernel, I would follow the procedure described here: https://phoenixnap.com/kb/build-linux-kernel .
 
 Identify Kernel Version
 
@@ -136,6 +155,10 @@ Load new symbol table from "/usr/lib/debug/boot/vmlinux"? (y or n) y
 * https://wiki.st.com/stm32mpu/wiki/Debugging_the_Linux_kernel_using_the_GDB#Enabling_Linux_awareness
 * https://hamisme.blogspot.com/2013/07/install-vmlinux-on-ubunut.html
 * https://kernelnewbies.kernelnewbies.narkive.com/j93AGe2V/gdb-for-kernel-debugging
+* https://docs.kernel.org/dev-tools/gdb-kernel-debugging.html
+* https://www.kernel.org/doc/html/v4.18/dev-tools/kgdb.html
+* https://www.hiroom2.com/2016/07/20/ubuntu-16-04-debug-ubuntu-16-04-kernel-with-qemu-gdb-stub/
+* https://wiki.st.com/stm32mpu/wiki/GDB_commands
 * https://docs.kernel.org/dev-tools/gdb-kernel-debugging.html
 
 
