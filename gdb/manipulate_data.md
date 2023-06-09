@@ -7,6 +7,7 @@ Ask current thread to exit gracefully.
 
 ```
 (gdb) call pthread_exit(0)
+
 ```
 
 
