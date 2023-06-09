@@ -1,6 +1,16 @@
-# Get Values
+# Manipulate Data
+-------------
 
-## Semaphore
+# Thread
+
+Ask current thread to exit gracefully. 
+
+```
+(gdb) call pthread_exit(0)
+```
+
+
+# Semaphore
 
 ```
 (gdb) set var *0x7fbdd42baef0 = 0
