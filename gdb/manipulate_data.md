@@ -30,3 +30,22 @@ is equivalent to
 tasks._unfinished_tasks._semlock._get_value()
 
 ```
+
+Note that the number of items in the queue may be different from the number of incomplete tasks.
+
+```
+>>> # incomplete tasks
+>>> tasks._unfinished_tasks._semlock._get_value()
+2
+```
+
+```
+>>> # items in the queue
+>>> tasks.qsize()
+1
+>>> # Another way to get items in the queue
+>>> tasks._maxsize - tasks._sem._semlock._get_value()
+>>> # = 3000 - 2999
+1
+
+```
