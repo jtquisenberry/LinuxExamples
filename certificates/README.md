@@ -27,7 +27,7 @@ $ sudo snap install snap-store
 
 Firefox may display:
 
-    www.wikipedia.org is most likely a safe site, but a secure connection could not be established. This issue is caused by Zscaler Root CA, which is either software on your computer or your network.
+<block> www.wikipedia.org is most likely a safe site, but a secure connection could not be established. This issue is caused by Zscaler Root CA, which is either software on your computer or your network. </block>
 
 Install the certificate within Firefox.
 
