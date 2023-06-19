@@ -10,6 +10,8 @@ $ sudo cp ZscalerRootCertificate-2048-SHA256.crt /usr/local/share/ca-certificate
 $ sudo update-ca-certificates
 ```
 
+https://forum.snapcraft.io/t/custom-ssl-certs-for-snapd-to-the-snap-store-communication/17446
+
 # snap and snap-store
 
 ```
@@ -20,6 +22,20 @@ $ sudo snap get system store-certs.cert1
 ...
 $ sudo snap install snap-store
 ```
+
+# Firefox 
+
+Firefox may display:
+
+    www.wikipedia.org is most likely a safe site, but a secure connection could not be established. This issue is caused by Zscaler Root CA, which is either software on your computer or your network.
+
+Install the certificate within Firefox.
+
+```
+Hamburger -> Settings -> Privacy & Security -> View Certificates -> Import
+
+```
+
 
 
 
