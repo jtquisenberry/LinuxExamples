@@ -36,7 +36,7 @@ Hamburger -> Settings -> Privacy & Security -> View Certificates -> Import
 
 ```
 
-
+https://www.lifewire.com/pem-file-4147928
 
 
 
