@@ -11,6 +11,13 @@ sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.in
 sudo /etc/init.d/xrdp start
 ```
 
+## Open Firewall Port
+
+```
+sudo ufw allow 3390
+```
+
+
 ## Allow RDP while logged in locally
 
 ```
@@ -45,3 +52,4 @@ sudo /etc/init.d/xrdp start
 * https://ishwarjagdale.github.io/wslWithGUI/
 * https://www.nextofwindows.com/how-to-enable-wsl2-ubuntu-gui-and-use-rdp-to-remote
 * https://askubuntu.com/questions/1245020/xrdp-on-ubuntu-20-04/1324767#1324767
+* https://www.cyberciti.biz/faq/how-to-open-firewall-port-on-ubuntu-linux-12-04-14-04-lts/
