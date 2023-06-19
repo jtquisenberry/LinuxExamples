@@ -18,6 +18,7 @@ $ sudo snap set system store-certs.cert1="$(cat /etc/ssl/certs/ZscalerRootCertif
 $ sudo snap get system store-certs.cert1
 -----BEGIN CERTIFICATE-----
 ...
+$ sudo snap install snap-store
 ```
 
 
