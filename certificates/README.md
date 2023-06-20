@@ -12,6 +12,24 @@ $ sudo update-ca-certificates
 
 https://forum.snapcraft.io/t/custom-ssl-certs-for-snapd-to-the-snap-store-communication/17446
 
+# Pip
+
+For one installation.
+
+```
+$ pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org <package_name>
+$ pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org pandas
+```
+
+Global option.
+
+```
+pip config set global.trusted-host "pypi.org files.pythonhosted.org pypi.python.org"
+python -m pip install pandas
+
+```
+
+
 # snap and snap-store
 
 ```
