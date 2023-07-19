@@ -9,6 +9,12 @@ https://www.podoliaka.org/2016/04/10/debugging-cpython-gdb/
 
 # Add Python Dependencies
 
+## Installs
+
+```
+apt-get install python3-dbg
+```
+
 ## Within GDB
 
 ```
