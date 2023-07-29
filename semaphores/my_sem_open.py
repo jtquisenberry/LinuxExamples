@@ -1,0 +1,55 @@
+import ctypes
+from ctypes.util import find_library
+import os
+from multiprocessing import Queue
+
+# Semaphore constants
+SEM_OFLAG = ctypes.c_int(os.O_CREAT | os.O_EXCL)
+SEM_PERM = ctypes.c_int(384)
+
+q = Queue()
+pthread = ctypes.CDLL(find_library('pthread'), use_errno=True)
+
+
+def sem_open(name=None, value=8472):
+    if name is None:
+        raise ValueError(f"name={name}")
+
+    name_bytes = name.encode('utf-8')
+
+    #value = None
+    if value is None:
+        handle = pthread.sem_open(ctypes.c_char_p(name_bytes), 0)
+        print(handle)
+
+    else:
+        handle = pthread.sem_open(ctypes.c_char_p(name_bytes), SEM_OFLAG, SEM_PERM,
+                                  ctypes.c_int(value))
+        print(handle)
+
+
+    #if handle == SEM_FAILURE:
+    #    e = ctypes.get_errno()
+    #    if e == errno.EEXIST:
+    #        raise FileExistsError("a semaphore named %s already exists" % name)
+    #    elif e == errno.ENOENT:
+    #        raise FileNotFoundError('cannot find semaphore named %s' % name)
+    #    elif e == errno.ENOSYS:
+    #        raise NotImplementedError('No semaphore implementation on this '
+    #                                  'system')
+    #    else:
+    #        raiseFromErrno()
+    print(name)
+    return handle
+
+if __name__ == '__main__':
+    pid = os.getpid()
+
+    for i in range(20):
+        name = f"{pid:06d}-{i:06d}"
+        value = i + 65
+        print(name)
+        handle = sem_open(name, value)
+        print(handle)
+        print("DONE")
+
