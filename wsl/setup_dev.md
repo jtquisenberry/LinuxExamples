@@ -12,6 +12,17 @@ $ sudo apt install snapd
 $ sudo snap install snap-store
 ```
 
+```
+$ sudo snap-store
+```
+If Snap Store fails to load, try
+
+```
+$ xhost +
+$ sudo snap-store
+```
+
+
 ## PyCharm Community
 
 Notice `sudo -E`. It keeps environment variables from outside sudo. Otherwise, there might be errors like `java.awt.AWTError: Can't connect to X11 window server using ':10.0' as the value of the DISPLAY variable.`
