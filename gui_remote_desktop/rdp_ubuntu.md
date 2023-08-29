@@ -41,8 +41,22 @@ sudo /etc/init.d/xrdp start
 
 ## Fix Black Screen, Followed by Disconnect
 
-?
+After entering correct credentials in RDP, the window may display a black screen for a few seconds and then disconnect.
 
+```
+# update-alternatives --config x-session-manager
+There are 3 choices for the alternative x-session-manager (providing /usr/bin/x-session-manager).
+
+  Selection    Path                    Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/gnome-session   50        auto mode
+  1            /usr/bin/gnome-session   50        manual mode
+  2            /usr/bin/startxfce4      50        manual mode
+  3            /usr/bin/xfce4-session   40        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 2
+update-alternatives: using /usr/bin/startxfce4 to provide /usr/bin/x-session-manager (x-session-manager) in manual mode
+```
 
 
 
