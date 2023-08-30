@@ -8,11 +8,15 @@ For examples, assume the certifcate is named `ZscalerRootCertificate-2048-SHA256
 $ sudo apt-get install -y ca-certificates
 $ sudo cp ZscalerRootCertificate-2048-SHA256.crt /usr/local/share/ca-certificates
 $ sudo update-ca-certificates
+Updating certificates in /etc/ssl/certs...
+1 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
 ```
 
 https://forum.snapcraft.io/t/custom-ssl-certs-for-snapd-to-the-snap-store-communication/17446
 
-**0 added 0 removed**
+## 0 added, 0 removed;
 
 If `update-ca-certificates` does not add or remove certificates, try re-running it with the `-f` (fresh) option. https://superuser.com/questions/1328413/removing-certificate-and-re-running-update-ca-certificates-leaves-lingering-syml
 
