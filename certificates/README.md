@@ -12,6 +12,15 @@ $ sudo update-ca-certificates
 
 https://forum.snapcraft.io/t/custom-ssl-certs-for-snapd-to-the-snap-store-communication/17446
 
+**0 added 0 removed**
+
+If `update-ca-certificates` does not add or remove certificates, try re-running it with the `-f` (fresh) option. https://superuser.com/questions/1328413/removing-certificate-and-re-running-update-ca-certificates-leaves-lingering-syml
+
+```
+$ sudo update-ca-certificates -f
+```
+
+
 # Pip
 
 For one installation.
@@ -56,6 +65,13 @@ Hamburger -> Settings -> Privacy & Security -> View Certificates -> Import
 
 https://www.lifewire.com/pem-file-4147928
 
+
+# Chrome
+
+```
+Three dots -> Settings -> Privacy and Security -> Security -> Manage certificates
+```
+Install the certificate.
 
 
 # Links
