@@ -38,3 +38,13 @@ $ sudo -E pycharm-community
 $ sudo snap install firefox
 $ firefox
 ```
+Some dialogs in Firefox require additional packages. https://github.com/flatpak/flatpak/issues/2446 
+
+```
+$ sudo xdg-desktop-portal
+$ sudo xdg-desktop-portal-gtk
+```
+
+## Chrome
+
+
