@@ -1,5 +1,5 @@
 I have not tried this yet, but plan to.
-
+https://unix.stackexchange.com/questions/118811/why-cant-i-run-gui-apps-as-root-no-protocol-specified/118826#118826
 
 
 # Why can't I run GUI apps as root: "No protocol specified"?
