@@ -41,8 +41,8 @@ $ firefox
 Some dialogs in Firefox require additional packages. https://github.com/flatpak/flatpak/issues/2446 
 
 ```
-$ sudo xdg-desktop-portal
-$ sudo xdg-desktop-portal-gtk
+$ sudo apt install xdg-desktop-portal
+$ sudo apt install xdg-desktop-portal-gtk
 ```
 
 ## Chrome
