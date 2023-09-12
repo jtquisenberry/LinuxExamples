@@ -7,7 +7,7 @@ sudo apt-get install xrdp
 sudo /etc/init.d/xrdp start
 ```
 
-## Allow RDP while logged in locally
+## Allow RDP while logged in locally *Possibly Not Needed for Ubuntu 22.04 LTS*
 
 ```
 nano /etc/xrdp/startwm.sh
