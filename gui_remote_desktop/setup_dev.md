@@ -31,6 +31,13 @@ Notice `sudo -E`. It keeps environment variables from outside sudo. Otherwise, t
 $ sudo snap install --classic pycharm-community
 $ sudo -E pycharm-community
 ```
+PyCharm may fail to fetch or push due to these erorrs:
+
+```
+unable to read askpass response ...  intellij-git-askpass-local.sh 
+```
+Try disabling the GitLab plugin and then the Git plugin. Then reenable the Git plugin. Restart PyCharm.
+
 
 ## Firefox
 
