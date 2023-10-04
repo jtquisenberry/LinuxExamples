@@ -36,7 +36,7 @@ PyCharm may fail to fetch or push due to these erorrs:
 ```
 unable to read askpass response ...  intellij-git-askpass-local.sh 
 ```
-Try disabling the GitLab plugin and then the Git plugin. Then reenable the Git plugin. Restart PyCharm.
+Try disabling the GitLab plugin and then the Git plugin. Then reenable the Git plugin. Restart PyCharm. https://youtrack.jetbrains.com/issue/IDEA-326514/unable-to-read-askpass-response-intellij-git-askpass-local.sh#focus=Comments-27-7974051.0-0
 
 
 ## Firefox
