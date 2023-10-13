@@ -46,6 +46,11 @@ $ xhost +
 $ sudo snap-store
 ```
 
+# Python 3.11
+
+```
+$ sudo apt install python3.11-dev
+```
 
 # PyCharm Community
 
@@ -63,7 +68,7 @@ unable to read askpass response ...  intellij-git-askpass-local.sh
 Try disabling the GitLab plugin and then the Git plugin. Then reenable the Git plugin. Restart PyCharm. https://youtrack.jetbrains.com/issue/IDEA-326514/unable-to-read-askpass-response-intellij-git-askpass-local.sh#focus=Comments-27-7974051.0-0
 
 
-## Firefox
+# Firefox
 
 ```
 $ sudo snap install firefox
@@ -76,14 +81,14 @@ $ sudo apt install xdg-desktop-portal
 $ sudo apt install xdg-desktop-portal-gtk
 ```
 
-## Chrome
+# Chrome
 
 ```
 $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 $ gdebi google-chrome-stable_current_amd64.deb 
 ```
 
-## GitHub Desktop
+# GitHub Desktop
 
 * https://github.com/shiftkey/desktop/releases
 * https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1
