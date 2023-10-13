@@ -1,12 +1,36 @@
 # Setup Development Environment
 
-## Snap Service
+# Authentication is required to create a color managed device on Ubuntu 22.04 / 20.04
+
+The safest fix to get rid of these popups is to create a new configuration file in `/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla`.
+
+``` bash
+sudo nano /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
+```
+
+Paste in the following:
+
+```
+[Allow Colord all Users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+```
+
+Reboot Ubuntu.
+
+https://devanswe.rs/how-to-fix-authentication-is-required-to-create-a-color-profile-managed-device-on-ubuntu-20-04-20-10/ 
+
+
+# Snap Service
 
 ```
 $ sudo apt install snapd
 ```
 
-## Snap Store App
+# Snap Store App
 
 ```
 $ sudo snap install snap-store
@@ -23,7 +47,7 @@ $ sudo snap-store
 ```
 
 
-## PyCharm Community
+# PyCharm Community
 
 Notice `sudo -E`. It keeps environment variables from outside sudo. Otherwise, there might be errors like `java.awt.AWTError: Can't connect to X11 window server using ':10.0' as the value of the DISPLAY variable.`
 
