@@ -28,7 +28,7 @@ sudo /etc/init.d/xrdp stop
 sudo /etc/init.d/xrdp start
 ```
 
-## Fix Black Screen, Followed by Disconnect
+## Fix Black Screen, Followed by Disconnect OR Oh no! Something has gone wrong
 
 After entering correct credentials in RDP, the window may display a black screen for a few seconds and then disconnect.
 
