@@ -24,6 +24,24 @@ If `update-ca-certificates` does not add or remove certificates, try re-running 
 $ sudo update-ca-certificates -f
 ```
 
+## Error x509 with snap
+
+I requests to `snap` fail and the error messages is like the following:
+
+```
+error: cannot install "snap-store": Post
+       https://api.snapcraft.io/v2/snaps/refresh: x509: certificate signed by
+       unknown authority
+```
+This solution may fix the issue.
+
+```
+sudo dpkg-reconfigure ca-certificates
+sudo systemctl restart snapd
+sudo snap refresh
+```
+https://askubuntu.com/questions/1284728/installed-ubuntu-20-04-from-0-x509-certificate-signed-by-unknown-authority-er
+
 
 # Pip
 
