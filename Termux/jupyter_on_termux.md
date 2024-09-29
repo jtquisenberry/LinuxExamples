@@ -1,4 +1,14 @@
 # Install Jupyter on Termux on Android
+# 2024 - 
+
+pip3 install pyzmq --config-settings="--zmq=/usr/lib"
+
+$ pkg install -y build-essential libzmq rust python
+pkg install -y patchelf
+
+patchelf --add-needed libpython3.11.so $PREFIX/lib/python3.11/site-packages/zmq/backend/cython/_zmq.cpython-311.so
+
+# 2019
 
 ## Install Linux Packages
 ```
