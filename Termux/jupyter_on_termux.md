@@ -1,12 +1,76 @@
 # Install Jupyter on Termux on Android
-# 2024 - 
+# 2024 - Termux 0.118.1, Python 3.11
 
-pip3 install pyzmq --config-settings="--zmq=/usr/lib"
+## Setup Storage
 
-$ pkg install -y build-essential libzmq rust python
-pkg install -y patchelf
+```
+$ termux-setup-storage
+```
+Allow
 
-patchelf --add-needed libpython3.11.so $PREFIX/lib/python3.11/site-packages/zmq/backend/cython/_zmq.cpython-311.so
+## Add Linux Repositories
+
+```
+$ pkg install x11-repo
+$ pkg update
+```
+
+## Update Linux Packages
+
+```
+$ pkg upgrade
+```
+
+## Install Linux Packages
+
+```
+$ pkg install which
+$ pkg install build-essential
+$ pkg install libzmq
+$ pkg install rust
+$ pkg install python
+```
+
+## Install Python Virtual Environment
+
+```
+$ python -m venv v311
+$ source v311/bin/activate
+(v311) $ pip install setuptools
+(v311) $ pip install cython
+(v311) $ pip install pyzmq
+(v311) $ pip install jupyter
+```
+It might be necessary to replace `pip install pyzmq` with `pip install pyzmq --config-settings="--zmq=/usr/lib"`.
+
+
+## Add Symbols
+
+```
+(v311) $ pkg install -y patchelf
+(v311) $ patchelf --add-needed libpython3.11.so v311/lib/python3.11/site-packages/zmq/backend/cython/_zmq.cpython-311.so
+```
+
+## Add Linux Packages
+
+```
+(v311) $ pkg install libjpeg-turbo
+```
+`libjpeg-turbo` is required for `matplotlib`.
+
+
+## Add Python Packages
+
+```
+(v311) $ pip install matplotlib
+```
+
+## Start Jupyter
+
+```
+(v311) $ jupyter-notebook
+```
+
 
 # 2019
 
