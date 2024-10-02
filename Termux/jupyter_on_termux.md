@@ -6,7 +6,7 @@
 ```
 $ termux-setup-storage
 ```
-Allow
+Click "Allow".
 
 ## Add Linux Repositories
 
