@@ -57,7 +57,7 @@ It might be necessary to replace `pip install pyzmq` with `pip install pyzmq --c
 (v311) $ pkg install libjpeg-turbo
 (v311) $ pkg install matplotlib
 ```
-`libjpeg-turbo` is required for `matplotlib`. `matplotlib` should be installed via the Termux installer. 
+`libjpeg-turbo` is required for `matplotlib`. `matplotlib` should be installed via the Termux installer, rather than `pip`. 
 
 
 ## Add Python Packages
