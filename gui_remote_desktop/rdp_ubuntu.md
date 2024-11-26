@@ -7,6 +7,13 @@ sudo apt-get install xrdp
 sudo /etc/init.d/xrdp start
 ```
 
+## Failed to execute child process "dbus-launch"
+
+```
+sudo apt install dbus-x11
+```
+
+
 ## Allow RDP while logged in locally **Not Needed for Ubuntu 22.04 LTS**
 
 ```
