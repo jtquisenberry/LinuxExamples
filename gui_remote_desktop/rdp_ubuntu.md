@@ -2,8 +2,8 @@
 
 ```
 sudo apt update && sudo apt -y upgrade
-sudo apt -y install xfce4
-sudo apt-get install xrdp
+sudo apt install xfce4
+sudo apt install xrdp
 sudo /etc/init.d/xrdp start
 ```
 
