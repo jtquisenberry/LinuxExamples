@@ -46,10 +46,11 @@ $ xhost +
 $ sudo snap-store
 ```
 
-# Python 3.11
+# Python 3.12
 
 ```
-$ sudo apt install python3.11-dev
+$ sudo apt install python3.12-dev
+$ sudo apt install python3.12-venv
 ```
 
 # PyCharm Community
@@ -99,3 +100,14 @@ $ sudo wget https://github.com/shiftkey/desktop/releases/download/release-3.2.9-
 # $ sudo apt-get install gdebi-core 
 $ sudo gdebi GitHubDesktop-linux-3.2.9-linux1.deb
 ```
+
+# Environment Variables
+
+```
+$ sudo /etc/environment
+```
+HF_HOME="/mnt/data/huggingface_cache"
+```
+$ sudo reboot
+```
+
