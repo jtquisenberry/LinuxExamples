@@ -1,4 +1,13 @@
 
+# Old Kernel Logs
+
+```
+# cd /var/log
+# zcat dmesg.1.gz | grep "2025"
+```
+
+
+
 # Kernel Logs Timestamps
 
 Manually convert the timestamp. 
