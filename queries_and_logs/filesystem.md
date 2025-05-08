@@ -15,6 +15,7 @@ inotifywait -m -r /opt/mydir
 fatrace | grep "opt/mydir"
 ```
 
+File Writes to `/opt/mydir`
 ``` 
 inotifywait -m -r -e modify /opt/mydir
 fatrace -f W | grep "opt/mydir"
